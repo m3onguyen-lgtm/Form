@@ -16,9 +16,15 @@ A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and s
 
 ## Prerequisites
 
-- Node.js 18.17 or later
-- npm 9.x or later
-- A Supabase account (free tier available at supabase.com)
+### Required Accounts
+- GitHub account (Sign up at [github.com](https://github.com) if you don't have one)
+- Vercel account (Sign up at [vercel.com](https://vercel.com) - you can use your GitHub account)
+- Supabase account (Sign up at [supabase.com](https://supabase.com) - free tier available)
+
+### Software Requirements
+- Node.js 18.17 or later (Download from [nodejs.org](https://nodejs.org))
+- npm 9.x or later (Comes with Node.js)
+- Git (Download from [git-scm.com](https://git-scm.com))
 
 ## Quick Start
 
@@ -46,6 +52,43 @@ A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and s
    npm run dev
    ```
    Your app should now be running on http://localhost:3000
+
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+Deploying your application to Vercel is the easiest way to get your project live. Here's how:
+
+1. Push your code to a GitHub repository
+   - Create a new repository on GitHub
+   - Push your code using these commands:
+     ```bash
+     git remote set-url origin your-github-repo-url
+     git push -u origin main
+     ```
+
+2. Deploy to Vercel:
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Click 'Import' on your repository
+   - Vercel will automatically detect Next.js
+   - Add your environment variables from `.env.local`
+   - Click 'Deploy'
+
+Your site will be live in minutes with a URL like: `your-project.vercel.app`
+
+### Manual Production Build
+
+If you prefer to build manually:
+
+1. Create a production build:
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm start
+   ```
 
 ## Project Structure
 

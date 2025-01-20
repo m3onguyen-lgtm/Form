@@ -6,6 +6,13 @@
 
 Modern full-stack template with Next.js 14, Supabase, Tailwind CSS, and shadcn/ui. Perfect for building web applications quickly.
 
+## Features
+
+- **Next.js 14** - React framework
+- **Supabase** - Auth and database made easy
+- **shadcn/ui + Tailwind** - Beautiful, ready-to-use components
+- **TypeScript** - Type safety for better code
+
 ## Before You Start
 
 Create these free accounts (you'll need them):
@@ -36,8 +43,6 @@ Create these free accounts (you'll need them):
 
 2. Open your project in Cursor:
 
-   Method 1 (Recommended for beginners):
-
    - Open Cursor
    - Click "Open a folder" (blue button in the center)
    - Go to your GitHub repository URL (created in step 1)
@@ -46,12 +51,10 @@ Create these free accounts (you'll need them):
    - Open Terminal in Cursor (View > Terminal or Cmd+J/Ctrl+J)
    - Type:
      ```bash
-     cd Documents/Projects  # or wherever you want your code to be stored in your computer
+     cd Documents/Projects  # or wherever you want your code
      git clone [paste your URL here]
      ```
    - Once cloned, click "Open a folder" again and select your new project folder
-
-   Note: The folder will be named the same as your repository (e.g., "my-website")
 
 3. Get your project running:
    - In Cursor, press Cmd+J (Mac) or Ctrl+J (Windows) to open the terminal
@@ -73,13 +76,13 @@ Create these free accounts (you'll need them):
    - Click "Commit"
    - Click "Sync" to save to GitHub
 
-### 4. Add Your Database (Optional if you want to store data)
+### 4. Add Your Database (Optional)
 
 1. Go to [supabase.com](https://supabase.com)
 2. Click "New Project"
 3. After creation, go to Project Settings > API
 4. Copy these values:
-   ```
+   ```env
    NEXT_PUBLIC_SUPABASE_URL=your-project-url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
    ```
@@ -90,24 +93,9 @@ Create these free accounts (you'll need them):
 
 1. Go to [vercel.com/new](https://vercel.com/new)
 2. Select your repository
-3. If you are using Supabase, under "Environment Variables", add the same Supabase values
+3. If you added a database, under "Environment Variables", add your Supabase values
 4. Click "Deploy"
 5. Wait a few minutes - your site is going live!
-
-## Need Help?
-
-- Use Cursor's AI: Type `/` while coding or click the chat icon
-- Check out the docs: [Next.js](https://nextjs.org/docs), [Supabase](https://supabase.com/docs), [shadcn/ui](https://ui.shadcn.com)
-- Visit [cursor.sh/docs](https://cursor.sh/docs) to learn about Cursor features
-
-Made by [Juan Ramos](https://www.juanmaramos.com)
-
-## Features
-
-- **Next.js 14** - React framework with App Router
-- **Supabase** - Auth and database made easy
-- **shadcn/ui + Tailwind** - Beautiful, ready-to-use components
-- **TypeScript** - Type safety for better code
 
 ## Project Structure
 
@@ -118,29 +106,20 @@ src/
 └── lib/         # Helper functions
 ```
 
-## Adding New Features
-
-### New UI Components
+## Adding Features
 
 Add pre-built components:
 
 ```bash
-npx shadcn@latest add [component-name]
+npx shadcn@latest add button  # Example: adding a button component
 ```
 
-Example: `npx shadcn@latest add button`
+## Need Help?
 
-### Database Features
+- Use Cursor's AI: Type `/` while coding or click the chat icon
+- Check out the docs: [Next.js](https://nextjs.org/docs), [Supabase](https://supabase.com/docs), [shadcn/ui](https://ui.shadcn.com)
+- Visit [cursor.sh/docs](https://cursor.sh/docs) to learn about Cursor features
 
-Use Supabase in your components:
+---
 
-```typescript
-import { supabase } from "@/lib/supabase";
-
-// Example: Get data from your database
-const { data } = await supabase.from("your_table").select();
-```
-
-## License
-
-MIT
+Made by [Juan Ramos](https://www.juanmaramos.com) • MIT License

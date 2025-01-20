@@ -1,5 +1,9 @@
 # Next.js Supabase Template
 
+<div align="center">
+  <img src="public/nextjs-thumbnail.png" alt="Next.js Supabase Template Preview" width="100%" />
+</div>
+
 A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and shadcn/ui. Perfect for building scalable web applications with a powerful stack.
 
 ## Features
@@ -17,11 +21,13 @@ A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and s
 ## Prerequisites
 
 ### Required Accounts
+
 - GitHub account (Sign up at [github.com](https://github.com) if you don't have one)
 - Vercel account (Sign up at [vercel.com](https://vercel.com) - you can use your GitHub account)
 - Supabase account (Sign up at [supabase.com](https://supabase.com) - free tier available)
 
 ### Software Requirements
+
 - Node.js 18.17 or later (Download from [nodejs.org](https://nodejs.org))
 - npm 9.x or later (Comes with Node.js)
 - Git (Download from [git-scm.com](https://git-scm.com))
@@ -29,21 +35,26 @@ A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and s
 ## Quick Start
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/juanmaramos/nextjs-supabase-template.git
    cd nextjs-supabase-template
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up your environment variables:
+
    ```bash
    cp .env.example .env.local
    ```
+
    Then edit `.env.local` and add your Supabase credentials:
+
    - NEXT_PUBLIC_SUPABASE_URL: Your Supabase project URL
    - NEXT_PUBLIC_SUPABASE_ANON_KEY: Your Supabase project anon/public key
 
@@ -60,6 +71,7 @@ A modern full-stack template featuring Next.js 14, Supabase, Tailwind CSS, and s
 Deploying your application to Vercel is the easiest way to get your project live. Here's how:
 
 1. Push your code to a GitHub repository
+
    - Create a new repository on GitHub
    - Push your code using these commands:
      ```bash
@@ -81,6 +93,7 @@ Your site will be live in minutes with a URL like: `your-project.vercel.app`
 If you prefer to build manually:
 
 1. Create a production build:
+
    ```bash
    npm run build
    ```
@@ -120,12 +133,10 @@ Example: `npx shadcn@latest add button`
 The template comes with Supabase client setup in `src/lib/supabase.ts`. To use Supabase in your components:
 
 ```typescript
-import { supabase } from '@/lib/supabase'
+import { supabase } from "@/lib/supabase";
 
 // Example: Fetch data
-const { data, error } = await supabase
-  .from('your_table')
-  .select('*')
+const { data, error } = await supabase.from("your_table").select("*");
 ```
 
 ## License
